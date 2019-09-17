@@ -55,7 +55,7 @@
       const date1 = new Date(data.lastDate);
       const date2 = new Date();
       const timeDiff = Math.abs(date2.getTime() - date1.getTime());
-      return Math.ceil(timeDiff / (1000 * 3600 * 24));
+      return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
     }
     document.body.innerHTML = `<div class="jumbo" id="render-container">
 it has been <em>${getNumDays()}</em> days since a <em>loop</em> has been written by <em>${data.person}</em>
